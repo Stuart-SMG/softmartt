@@ -36,8 +36,8 @@
                 <tbody id="userTableBody">
                     <tr>
                         <td>1</td>
-                        <td>Stuart</td>
-                        <td>stuartsmg7@gmail.com.com</td>
+                        <td>test user</td>
+                        <td>stuartsmg7@gmail.com</td>
                         <td>male</td>
                         <td>agent</td>
                     </tr>
@@ -55,11 +55,11 @@
             <form id="userForm">
                 <div class="form-group">
                     <label for="userName">Name</label>
-                    <input type="text" id="userName" required>
+                    <input name="name" type="text" id="userName" required>
                 </div>
                 <div class="form-group">
                     <label for="userEmail">Email</label>
-                    <input type="email" id="userEmail" required>
+                    <input name="email" type="email" id="userEmail" required>
                 </div>
                 <div class="form-group">
                     <label for="userGender">gender</label>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="form-group">
                     <label for="userRole">Role</label>
-                    <input type="text" id="userRole" required>
+                    <inputn name="role" type="text" id="userRole" required>
                 </div>
                 <button type="submit" class="btn">Add User</button>
             </form>
@@ -128,7 +128,7 @@
         </style>
         <div class="footer">
             <p>&copy; Stuart SMG | <a href="https://www.instagram.com/stuart_smg/">Instagram</a> | <a
-                    href="tel:+255782028232">Contact</a> | <a href="mailto:stuartsmg7@gmail.com">Email</a></p>
+                    href="{{ $contact['mobile'] }}">Contact</a> | <a href="{{ $contact['mobile'] }}">Email</a></p>
         </div>
     </div>
 

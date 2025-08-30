@@ -65,9 +65,11 @@
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img style="width: 190px" src="assets/img/logo.png" alt="">
-                <button type="button" class="gold-btn" aria-label="My Account">
-                    my account
-                </button>
+
+                <a href="{{ route('account') }}"><button type="button" class="gold-btn">
+                        My Account
+                    </button></a>
+
 
 
                 {{-- <h1 class="sitename">SOFT</h1> --}}
@@ -114,193 +116,195 @@
         <div class="page-title dark-background">
             <div class="container position-relative">
                 <h1>Job Details</h1>
-            <p>Discover available jobs posted by SoftMartt. Find trusted local opportunities in Tanzania.</p>
-            <nav class="breadcrumbs">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li class="current">Job Details</li>
-                </ol>
-            </nav>
-        </div>
-    </div><!-- End Page Title -->
+                <p>Discover available jobs posted by SoftMartt. Find trusted local opportunities in Tanzania.</p>
+                <nav class="breadcrumbs">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current">Job Details</li>
+                    </ol>
+                </nav>
+            </div>
+        </div><!-- End Page Title -->
 
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row">
 
-            <!-- Job Content -->
-            <div class="col-lg-8">
+                <!-- Job Content -->
+                <div class="col-lg-8">
 
-                <section id="job-details" class="job-details section">
-                    <div class="container">
+                    <section id="job-details" class="job-details section">
+                        <div class="container">
 
-                        <article class="article">
+                            <article class="article">
 
-                            <div class="post-img">
-                                <img src="assets/img/jobs/job-1.jpg" alt="" class="img-fluid">
+                                <div class="post-img">
+                                    <img src="assets/img/jobs/job-1.jpg" alt="" class="img-fluid">
+                                </div>
+
+                                <h2 class="title">Fundi Ujenzi / Construction Worker</h2>
+
+                                <div class="meta-top">
+                                    <ul>
+                                        <li class="d-flex align-items-center"><i class="bi bi-building"></i> <a
+                                                href="job-details.html">SoftMartt</a></li>
+                                        <li class="d-flex align-items-center"><i class="bi bi-geo-alt"></i> <a
+                                                href="job-details.html">Dar es Salaam, Tanzania</a></li>
+                                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                                href="job-details.html"><time datetime="2025-08-28">Aug 28,
+                                                    2025</time></a></li>
+                                    </ul>
+                                </div><!-- End meta top -->
+
+                                <div class="content">
+                                    <p>
+                                        SoftMartt is looking for a reliable Fundi Ujenzi to handle construction projects
+                                        within Tanzanian communities. Tasks include house renovations, minor repairs,
+                                        and
+                                        assisting in new building projects.
+                                    </p>
+
+                                    <h3>Job Requirements</h3>
+                                    <ul>
+                                        <li>Proven experience in construction or renovation works</li>
+                                        <li>Knowledge of safety regulations and local construction standards</li>
+                                        <li>Ability to work in teams and independently</li>
+                                        <li>Available in Dar es Salaam and nearby regions</li>
+                                    </ul>
+
+                                    <h3>Responsibilities</h3>
+                                    <ul>
+                                        <li>Assist in building, repairing, and renovating structures</li>
+                                        <li>Ensure materials are used efficiently and safely</li>
+                                        <li>Report progress to supervisors and maintain high-quality work</li>
+                                        <li>Collaborate with other SoftMartt experts on multi-skill projects</li>
+                                    </ul>
+
+                                    <h3>Application Process</h3>
+                                    <p>
+                                        Interested candidates can apply by sending their CV and contact details via
+                                        WhatsApp or email. SoftMartt provides opportunities for local workers with
+                                        reliable
+                                        skills and experience.
+                                    </p>
+
+                                    <img src="assets/img/jobs/job-inside.jpg" class="img-fluid" alt="">
+
+                                </div><!-- End job content -->
+
+                                <div class="meta-bottom">
+                                    <i class="bi bi-folder"></i>
+                                    <ul class="cats">
+                                        <li><a href="#">Construction</a></li>
+                                    </ul>
+
+                                    <i class="bi bi-tags"></i>
+                                    <ul class="tags">
+                                        <li><a href="#">Fundi</a></li>
+                                        <li><a href="#">SoftMartt</a></li>
+                                        <li><a href="#">Tanzania</a></li>
+                                    </ul>
+                                </div><!-- End meta bottom -->
+
+                            </article>
+
+                        </div>
+                    </section><!-- /Job Details Section -->
+
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4 sidebar">
+
+                    <div class="widgets-container">
+
+                        <!-- Company Widget -->
+                        <div class="company-widget widget-item">
+                            <div class="d-flex flex-column align-items-center">
+                                <img src="assets/img/jobs/company-logo.jpg" class="rounded-circle flex-shrink-0" alt="">
+                                <h4>SoftMartt</h4>
+                                <div class="social-links">
+                                    <a href="#"><i class="bi bi-facebook"></i></a>
+                                    <a href="#"><i class="bi bi-instagram"></i></a>
+                                    <a href="#"><i class="bi bi-twitter-x"></i></a>
+                                </div>
+                                <p>
+                                    SoftMartt connects Tanzanians with local experts and job opportunities, ranging from
+                                    construction and healthcare to creative services.
+                                </p>
+                            </div>
+                        </div><!--/Company Widget -->
+
+                        <!-- Search Widget -->
+                        <div class="search-widget widget-item">
+                            <h3 class="widget-title">Search Jobs</h3>
+                            <form action="">
+                                <input type="text" placeholder="Search jobs...">
+                                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+                            </form>
+                        </div><!--/Search Widget -->
+
+                        <!-- Job Categories Widget -->
+                        <div class="categories-widget widget-item">
+                            <h3 class="widget-title">Job Categories</h3>
+                            <ul class="mt-3">
+                                <li><a href="#">Construction <span>(12)</span></a></li>
+                                <li><a href="#">Healthcare <span>(8)</span></a></li>
+                                <li><a href="#">Transport <span>(6)</span></a></li>
+                                <li><a href="#">Child Care <span>(4)</span></a></li>
+                                <li><a href="#">Creative & Media <span>(10)</span></a></li>
+                            </ul>
+                        </div><!--/Job Categories Widget -->
+
+                        <!-- Recent Jobs Widget -->
+                        <div class="recent-posts-widget widget-item">
+                            <h3 class="widget-title">Recent Jobs</h3>
+
+                            <div class="post-item">
+                                <img src="assets/img/jobs/job-recent-1.jpg" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="job-details.html">Dokta wa Mifugo</a></h4>
+                                    <time datetime="2025-08-01">Aug 1, 2025</time>
+                                </div>
                             </div>
 
-                            <h2 class="title">Fundi Ujenzi / Construction Worker</h2>
+                            <div class="post-item">
+                                <img src="assets/img/jobs/job-recent-2.jpg" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="job-details.html">Fundi Piki Piki</a></h4>
+                                    <time datetime="2025-07-28">Jul 28, 2025</time>
+                                </div>
+                            </div>
 
-                            <div class="meta-top">
-                                <ul>
-                                    <li class="d-flex align-items-center"><i class="bi bi-building"></i> <a
-                                            href="job-details.html">SoftMartt</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-geo-alt"></i> <a
-                                            href="job-details.html">Dar es Salaam, Tanzania</a></li>
-                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="job-details.html"><time datetime="2025-08-28">Aug 28,
-                                                2025</time></a></li>
-                                </ul>
-                            </div><!-- End meta top -->
+                            <div class="post-item">
+                                <img src="assets/img/jobs/job-recent-3.jpg" alt="" class="flex-shrink-0">
+                                <div>
+                                    <h4><a href="job-details.html">Anatairi Watoto</a></h4>
+                                    <time datetime="2025-07-15">Jul 15, 2025</time>
+                                </div>
+                            </div>
 
-                            <div class="content">
-                                <p>
-                                    SoftMartt is looking for a reliable Fundi Ujenzi to handle construction projects
-                                    within Tanzanian communities. Tasks include house renovations, minor repairs, and
-                                    assisting in new building projects.
-                                </p>
+                        </div><!--/Recent Jobs Widget -->
 
-                                <h3>Job Requirements</h3>
-                                <ul>
-                                    <li>Proven experience in construction or renovation works</li>
-                                    <li>Knowledge of safety regulations and local construction standards</li>
-                                    <li>Ability to work in teams and independently</li>
-                                    <li>Available in Dar es Salaam and nearby regions</li>
-                                </ul>
-
-                                <h3>Responsibilities</h3>
-                                <ul>
-                                    <li>Assist in building, repairing, and renovating structures</li>
-                                    <li>Ensure materials are used efficiently and safely</li>
-                                    <li>Report progress to supervisors and maintain high-quality work</li>
-                                    <li>Collaborate with other SoftMartt experts on multi-skill projects</li>
-                                </ul>
-
-                                <h3>Application Process</h3>
-                                <p>
-                                    Interested candidates can apply by sending their CV and contact details via
-                                    WhatsApp or email. SoftMartt provides opportunities for local workers with reliable
-                                    skills and experience.
-                                </p>
-
-                                <img src="assets/img/jobs/job-inside.jpg" class="img-fluid" alt="">
-
-                            </div><!-- End job content -->
-
-                            <div class="meta-bottom">
-                                <i class="bi bi-folder"></i>
-                                <ul class="cats">
-                                    <li><a href="#">Construction</a></li>
-                                </ul>
-
-                                <i class="bi bi-tags"></i>
-                                <ul class="tags">
-                                    <li><a href="#">Fundi</a></li>
-                                    <li><a href="#">SoftMartt</a></li>
-                                    <li><a href="#">Tanzania</a></li>
-                                </ul>
-                            </div><!-- End meta bottom -->
-
-                        </article>
+                        <!-- Tags Widget -->
+                        <div class="tags-widget widget-item">
+                            <h3 class="widget-title">Tags</h3>
+                            <ul>
+                                <li><a href="#">Fundi</a></li>
+                                <li><a href="#">Expert</a></li>
+                                <li><a href="#">SoftMartt</a></li>
+                                <li><a href="#">Tanzania</a></li>
+                                <li><a href="#">Jobs</a></li>
+                            </ul>
+                        </div><!--/Tags Widget -->
 
                     </div>
-                </section><!-- /Job Details Section -->
-
-            </div>
-
-            <!-- Sidebar -->
-            <div class="col-lg-4 sidebar">
-
-                <div class="widgets-container">
-
-                    <!-- Company Widget -->
-                    <div class="company-widget widget-item">
-                        <div class="d-flex flex-column align-items-center">
-                            <img src="assets/img/jobs/company-logo.jpg" class="rounded-circle flex-shrink-0" alt="">
-                            <h4>SoftMartt</h4>
-                            <div class="social-links">
-                                <a href="#"><i class="bi bi-facebook"></i></a>
-                                <a href="#"><i class="bi bi-instagram"></i></a>
-                                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                            </div>
-                            <p>
-                                SoftMartt connects Tanzanians with local experts and job opportunities, ranging from
-                                construction and healthcare to creative services.
-                            </p>
-                        </div>
-                    </div><!--/Company Widget -->
-
-                    <!-- Search Widget -->
-                    <div class="search-widget widget-item">
-                        <h3 class="widget-title">Search Jobs</h3>
-                        <form action="">
-                            <input type="text" placeholder="Search jobs...">
-                            <button type="submit" title="Search"><i class="bi bi-search"></i></button>
-                        </form>
-                    </div><!--/Search Widget -->
-
-                    <!-- Job Categories Widget -->
-                    <div class="categories-widget widget-item">
-                        <h3 class="widget-title">Job Categories</h3>
-                        <ul class="mt-3">
-                            <li><a href="#">Construction <span>(12)</span></a></li>
-                            <li><a href="#">Healthcare <span>(8)</span></a></li>
-                            <li><a href="#">Transport <span>(6)</span></a></li>
-                            <li><a href="#">Child Care <span>(4)</span></a></li>
-                            <li><a href="#">Creative & Media <span>(10)</span></a></li>
-                        </ul>
-                    </div><!--/Job Categories Widget -->
-
-                    <!-- Recent Jobs Widget -->
-                    <div class="recent-posts-widget widget-item">
-                        <h3 class="widget-title">Recent Jobs</h3>
-
-                        <div class="post-item">
-                            <img src="assets/img/jobs/job-recent-1.jpg" alt="" class="flex-shrink-0">
-                            <div>
-                                <h4><a href="job-details.html">Dokta wa Mifugo</a></h4>
-                                <time datetime="2025-08-01">Aug 1, 2025</time>
-                            </div>
-                        </div>
-
-                        <div class="post-item">
-                            <img src="assets/img/jobs/job-recent-2.jpg" alt="" class="flex-shrink-0">
-                            <div>
-                                <h4><a href="job-details.html">Fundi Piki Piki</a></h4>
-                                <time datetime="2025-07-28">Jul 28, 2025</time>
-                            </div>
-                        </div>
-
-                        <div class="post-item">
-                            <img src="assets/img/jobs/job-recent-3.jpg" alt="" class="flex-shrink-0">
-                            <div>
-                                <h4><a href="job-details.html">Anatairi Watoto</a></h4>
-                                <time datetime="2025-07-15">Jul 15, 2025</time>
-                            </div>
-                        </div>
-
-                    </div><!--/Recent Jobs Widget -->
-
-                    <!-- Tags Widget -->
-                    <div class="tags-widget widget-item">
-                        <h3 class="widget-title">Tags</h3>
-                        <ul>
-                            <li><a href="#">Fundi</a></li>
-                            <li><a href="#">Expert</a></li>
-                            <li><a href="#">SoftMartt</a></li>
-                            <li><a href="#">Tanzania</a></li>
-                            <li><a href="#">Jobs</a></li>
-                        </ul>
-                    </div><!--/Tags Widget -->
 
                 </div>
 
             </div>
-
         </div>
-    </div>
 
-</main>
+    </main>
 
 
     <footer id="footer" class="footer dark-background">

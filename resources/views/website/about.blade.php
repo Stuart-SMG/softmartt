@@ -65,9 +65,11 @@
             <a href="index.html" class="logo d-flex align-items-center">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <img style="width: 190px" src="assets/img/logo.png" alt="">
-                <button type="button" class="gold-btn" aria-label="My Account">
-                    my account
-                </button>
+
+                <a href="{{ route('account') }}"><button type="button" class="gold-btn">
+                        My Account
+                    </button></a>
+
 
 
                 {{-- <h1 class="sitename">SOFT</h1> --}}
@@ -230,7 +232,7 @@
                                 alt="Client 2"></div>
                         <div class="swiper-slide"><img src="assets/img/clients/spider1.png" class="img-fluid"
                                 alt="Client 3"></div>
-                 
+
                     </div>
                 </div>
 
