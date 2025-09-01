@@ -64,7 +64,7 @@
 
             <a href="index.html" class="logo d-flex align-items-center">
 
-                <img style="width: 190px" src="assets/img/logo.png" alt="">
+                <img style="width: 190px" src="{{ asset('assets/img/logo.png') }}" alt="">
                 <!-- Trigger button -->
 
                 <a href="{{ route('account') }}"><button type="button" class="gold-btn">

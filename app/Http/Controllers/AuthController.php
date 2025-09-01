@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Session;
 use App\Helpers\ApiRoutes;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash; 
+use App\Models\User; 
+
+
+
 
 class AuthController extends Controller
 {
@@ -14,40 +20,48 @@ class AuthController extends Controller
      */
     public function showLogin()
     {
-        return view('auth.login'); // your login blade
+        return view('auth.login'); 
     }
 
     /**
      * Handle login via API
      */
-    public function login(Request $request)
-    {
-        // Validate input
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|string',
-        ]);
+ public function login(Request $request)
+{
+    // Validate request
+    $request->validate([
+        'email' => 'required|email',
+        'password' => 'required'
+    ]);
 
-        // Call login API
-        $response = Http::post(ApiRoutes::login(), [
-            'email' => $request->email,
-            'password' => $request->password,
-        ]);
+    // Try to find the user
+    $user = User::where('email', $request->email)->first();
 
-        if ($response->successful()) {
-            $data = $response->json();
-
-       
-            Session::put('api_token', $data['token'] ?? null);
-            Session::put('user', $data['user'] ?? null);
-
-            return redirect()->route('dashboard'); 
-        }
-
-        return back()->withErrors([
-            'email' => 'Login failed, check your credentials.',
-        ])->withInput();
+    // Email not found
+    if (!$user) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Email not found. Please register first.'
+        ], 404);
     }
+
+    // Wrong password
+    if (!Hash::check($request->password, $user->password)) {
+        return response()->json([
+            'status' => 'error',
+            'message' => 'Incorrect password. Try again.'
+        ], 401);
+    }
+
+    // Successful login
+    Auth::login($user);
+
+    return response()->json([
+        'status' => 'success',
+        'message' => 'Welcome back, ' . $user->name . '!',
+        'token' => $user->createToken('API Token')->plainTextToken 
+    ]);
+}
 
     /**
      * Logout

@@ -273,7 +273,7 @@
                     <!-- Left Column: Image + Video -->
                     <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="100">
                         <img src="assets/img/about.jpg" class="img-fluid" alt="About SoftMartt">
-                        <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox pulsating-play-btn"></a>
+                        <a href="https://softmartt.web.app" class="glightbox pulsating-play-btn"></a>
                     </div>
 
                     <!-- Right Column: Content -->
