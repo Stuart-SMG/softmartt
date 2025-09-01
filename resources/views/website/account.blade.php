@@ -107,7 +107,7 @@
     <main class="main">
         <div class="login-container">
             <h2>SoftMartt Login</h2>
-            <form method="post" action="{{ route('login') }}" id="loginForm">
+            <form id="loginForm">
                 <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
                 <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
                 <button type="submit" class="gold-btn w-100">Login</button>
@@ -191,35 +191,10 @@
 
     <!-- Login API JS -->
     <script>
+        const loginApiUrl = "{{ route('login') }}";
+
         document.getElementById('loginForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-
-            try {
-                const response = await fetch('/api/login', { // Replace with your API endpoint
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ email, password })
-                });
-                const data = await response.json();
-
-                if (response.ok) {
-                    alert('Login successful!');
-                    window.location.href = "{{ route('account') }}";
-                } else {
-                    alert(data.message || 'Login failed!');
-                }
-            } catch (err) {
-                console.error(err);
-                alert('Network error!');
-            }
-        });
-    </script>
-    <script>
-        document.getElementById('loginForm').addEventListener('submit', async function (e) {
-            e.preventDefault();
-
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
@@ -236,23 +211,18 @@
                 const data = await response.json();
 
                 if (response.ok) {
-                    // login successful
                     alert('Login successful!');
-                    // optionally store token if API returns one
-                    localStorage.setItem('token', data.token); // if your API gives a token
-                    window.location.href = "{{ route('account') }}"; // redirect to account page
+                    localStorage.setItem('token', data.token || '');
+                    window.location.href = "{{ route('account') }}";
                 } else {
-                    // login failed
                     alert(data.message || 'Login failed! Check your credentials.');
                 }
-
             } catch (err) {
                 console.error(err);
                 alert('Network error. Try again later.');
             }
         });
     </script>
-
 
 </body>
 
