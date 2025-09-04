@@ -25,12 +25,12 @@ Route::post('/login', [AuthController::class, 'login'])->name('apilogin');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // });
 
-use App\Http\Controllers\LoginController;
+// use App\Http\Controllers\LoginController;
 
-Route::get('/login', [LoginController::class, 'create'])->name('login.form');
-Route::post('/login',[LoginController::class, 'store'])->name(
-    'login.submit'
-);
+// Route::get('/login', [LoginController::class, 'create'])->name('login.form');
+// Route::post('/login',[LoginController::class, 'store'])->name(
+//     'login.submit'
+// );
 
 
 Route::get('/agent', function(){
@@ -40,6 +40,9 @@ Route::get('/agent', function(){
 Route::get('/admin', function(){
     return view('admin.index');
 })->name('admin');
+
+
+
 
 require __DIR__ . '/websiteRoutes.php';
 require __DIR__ . '/viewroutes.php';

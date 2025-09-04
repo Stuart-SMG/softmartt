@@ -92,12 +92,14 @@
 
     <header style="background-color:#1e4356;" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-            <a href="{{ route('webhome') }}" class="logo d-flex align-items-center">
+            <a href="#" class="logo d-flex align-items-center">
                 <img style="width: 190px" src="{{ asset('assets/img/logo.png') }}" alt="SoftMartt Logo">
             </a>
             <nav class="navmenu">
                 <ul>
-                    <li><a href="{{ route('webhome') }}">HOME</a></li>
+                    <li><a href="{{ route('agent') }}">agent</a></li>
+                    <li><a href="{{ route('admin') }}">admin</a></li>
+                    <li><a href="#">HOME</a></li>
                     <li><a href="{{ route('webbusiness') }}">BUSINESS</a></li>
                     <li><a href="{{ route('webservice') }}">SERVICE</a></li>
                     <li><a href="{{ route('webcharity') }}">CHARITY</a></li>
@@ -174,7 +176,7 @@
                     showToast('Login successful!', '#28a745');
 
                     // redirect to dashboard
-                    setTimeout(() => window.location.href = "{{ route('dashboard') }}", 1200);
+                    setTimeout(() => window.location.href = "#", 1200);
                 } else {
                     showToast(data.message || 'Invalid credentials!', '#dc3545');
                 }

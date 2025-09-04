@@ -140,9 +140,11 @@
                             <div class="collapse" id="sidebarPages">
                                 <ul class="nav nav-sm flex-column ms-3">
 
-                                    <li class="nav-item"><a href="{{ url('users') }}" class="nav-link">All customers</a>
+                                    <li class="nav-item"><a href="{{ route('agent.customer') }}" class="nav-link">All
+                                            customers</a>
                                     </li>
-                                    <li class="nav-item"><a href="{{ url('users') }}" class="nav-link">All active
+                                    <li class="nav-item"><a href="{{ route('active.customer') }}" class="nav-link">All
+                                            active
                                             customers</a>
                                     </li>
                                 </ul>

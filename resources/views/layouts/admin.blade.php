@@ -128,7 +128,7 @@
                     <!-- Sidebar Menu -->
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/dashboard') }}">
+                            <a class="nav-link" href="{{ route('homee') }}">
                                 <i class="fe fe-home"></i> Admin Dashboard
                             </a>
                         </li>
@@ -139,9 +139,11 @@
                             </a>
                             <div class="collapse" id="sidebarPages">
                                 <ul class="nav nav-sm flex-column ms-3">
-                                    <li class="nav-item"><a href="{{ url('agents') }}" class="nav-link">All agents</a>
+                                    <li class="nav-item"><a href="{{ route('all.agent') }}" class="nav-link">All
+                                            agents</a>
                                     </li>
-                                    <li class="nav-item"><a href="{{ url('users') }}" class="nav-link">All users</a>
+                                    <li class="nav-item"><a href="{{ route('all.customer') }}" class="nav-link">All
+                                            Customers</a>
                                     </li>
                                 </ul>
                             </div>
