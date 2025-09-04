@@ -31,28 +31,7 @@ class WebsiteController extends Controller
        return view('welcome',);
     }
 
-    public function login(Request $request)
-{
-    $url = ApiRoutes::login(); 
-    $response = Http::post($url, [
-        'email'    => $request->input('email'),
-        'password' => $request->input('password'),
-    ]);
-
-    if ($response->successful()) {
-        $data = $response->json();
-
-  
-        session(['api_token' => $data['token'] ?? null]);
-
-        return redirect()->route('webhome')->with('success', 'Login successful!');
-    } else {
-        return back()->withErrors([
-            'login' => 'Invalid credentials or API error.',
-        ]);
-    }
-}
-
+   
 
  
 }

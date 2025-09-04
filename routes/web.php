@@ -1,37 +1,45 @@
 <?php
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\WebsiteController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController;
 
-Route::get('/',[WebsiteController::class, 'create']);
+
+Route::get('/', [WebsiteController::class, 'create'])->name('home');
 
 
 Route::get('/login', [AuthController::class, 'showLogin'])->name('login');
-Route::post('/login', [AuthController::class, 'login'])->name('login.submit');
-Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+
+Route::post('/login', [AuthController::class, 'login'])->name('apilogin');
 
 
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified',
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
+// Route::middleware(['auth'])->group(function () {
+
+    Route::get('/welcome', function () {
+        return view('dashboard');
+    })->name('dashboard');
+
+
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 // });
 
-Route::get('welcome',function(){
-    return view('dashboardd');
-})->name('dashboardd');
+use App\Http\Controllers\LoginController;
 
-Route::get('/account',function(){
-    return view('website.account');
-} )->name('account');
-
+Route::get('/login', [LoginController::class, 'create'])->name('login.form');
+Route::post('/login',[LoginController::class, 'store'])->name(
+    'login.submit'
+);
 
 
-require __DIR__.'/websiteRoutes.php';
+Route::get('/agent', function(){
+    return view('agent.index');
+})->name('agent');
+
+Route::get('/admin', function(){
+    return view('admin.index');
+})->name('admin');
+
+require __DIR__ . '/websiteRoutes.php';
+require __DIR__ . '/viewroutes.php';

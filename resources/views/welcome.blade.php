@@ -68,7 +68,7 @@
                 <img style="width: 190px" src="assets/img/logo.png" alt="">
 
 
-                <a href="{{ route('account') }}"><button type="button" class="gold-btn">
+                <a href="#"><button type="button" class="gold-btn">
                         My Account
                     </button></a>
 
@@ -84,6 +84,8 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
+                    <li><a href="{{ route('agent') }}">agent</a></li>
+                    <li><a href="{{ route('admin') }}">admin</a></li>
                     <li><a href="{{ Route('webhome') }}" class="active">HOME</a></li>
                     <li><a href="{{ route('webbusiness') }}">BUSINESS</a></li>
                     <li><a href="{{ route('webservice') }}">SERVICE</a></li>

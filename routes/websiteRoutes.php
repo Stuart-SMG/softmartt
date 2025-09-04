@@ -30,6 +30,3 @@ Route::get('/experts', function () {
 Route::get('/about', function () {
     return view('website.about'); 
 })->name('webabout');
-
-
-Route::post('/login', [WebsiteController::class, 'login'])->name('apilogin');
